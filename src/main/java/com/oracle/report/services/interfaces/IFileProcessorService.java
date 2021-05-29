@@ -1,8 +1,10 @@
 package com.oracle.report.services.interfaces;
 
-import org.omg.CORBA.SystemException;
+
+import com.oracle.report.errorhandling.exceptions.SystemException;
 
 public interface IFileProcessorService {
 
-    public void loadFile() throws SystemException;
+    public void loadFile() ;
+
 }

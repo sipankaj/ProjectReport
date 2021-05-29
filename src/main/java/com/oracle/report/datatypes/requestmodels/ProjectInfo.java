@@ -6,9 +6,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class ProjectInfo {
 
-
+    int customerId;
+    int contractId;
+    String geoZone;
+    String teamCode;
+    String projectCode;
+    String buildDuration;
 
 }
