@@ -13,6 +13,19 @@ public class ProjectInfo {
     String geoZone;
     String teamCode;
     String projectCode;
-    String buildDuration;
+    int buildDuration;
+
+    @Override
+    public String toString() {
+        return "ProjectInfo{" +
+                "customerId=" + customerId +
+                ", contractId=" + contractId +
+                ", geoZone='" + geoZone + '\'' +
+                ", teamCode='" + teamCode + '\'' +
+                ", projectCode='" + projectCode + '\'' +
+                ", buildDuration=" + buildDuration +
+                '}';
+    }
+
 
 }
