@@ -25,6 +25,11 @@ import java.util.stream.Stream;
 
 import static com.oracle.report.constants.ApplicationConsts.FILE_SEPARATOR;
 
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - FileProcessorService provides APIs to read and process data from csv file.
+ */
 @Component
 public class FileProcessorService implements IFileProcessorService {
     @Autowired
@@ -32,6 +37,9 @@ public class FileProcessorService implements IFileProcessorService {
     static Logger logger = LoggerFactory.getLogger(FileProcessorService.class);
     public static Optional<List<ProjectInfo>> projectData;
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void loadFile() throws SystemException {
         logger.debug("Enter - FileProcessorService:loadFile");

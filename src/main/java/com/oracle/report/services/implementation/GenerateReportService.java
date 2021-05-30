@@ -10,12 +10,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - GenerateReportService provides APIs to generate report.
+ */
 @Component
 public class GenerateReportService implements IGenerateReportService {
     Logger logger = LoggerFactory.getLogger(GenerateReportService.class);
     @Autowired
     IProcessLogService processLogService;
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void generateReport() throws SystemException {
         logger.debug("Enter - GenerateReportService:generateReport");

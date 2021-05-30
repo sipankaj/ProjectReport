@@ -9,7 +9,11 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
-
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - ReportingController helps perform reporting operations and is being invoked by spring on Application ready event.
+ */
 @Component
 public class ReportingController implements ApplicationListener<ApplicationReadyEvent> {
     private final ApplicationArguments appArgs;
@@ -25,6 +29,9 @@ public class ReportingController implements ApplicationListener<ApplicationReady
         this.appArgs = appArgs;
     }
 
+    /**
+     * @param applicationReadyEvent
+     */
     @Override
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         if (applicationReadyEvent.getApplicationContext().getParent() == null) {

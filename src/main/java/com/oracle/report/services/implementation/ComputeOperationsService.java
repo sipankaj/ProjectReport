@@ -17,6 +17,11 @@ import org.springframework.stereotype.Component;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - ComputeOperationsService provides APIs to compute different operations on data.
+ */
 @Component
 public class ComputeOperationsService implements IComputeOperationsService {
     Logger logger = LoggerFactory.getLogger(ComputeOperationsService.class);
@@ -30,6 +35,9 @@ public class ComputeOperationsService implements IComputeOperationsService {
     public ComputeOperationsService() {
     }
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void getUniqCustomerContractRelData() throws SystemException {
         logger.debug("Enter - ComputeOperationsService:getUniqCustomerContractRelData");
@@ -51,6 +59,9 @@ public class ComputeOperationsService implements IComputeOperationsService {
         logger.debug("Exit - ComputeOperationsService:getUniqCustomerContractRelData");
     }
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void getUniqCustomerGeoZoneRelData() throws SystemException {
         logger.debug("Enter - ComputeOperationsService:getUniqCustomerGeoZoneRelData");
@@ -72,6 +83,9 @@ public class ComputeOperationsService implements IComputeOperationsService {
         logger.debug("Exit - ComputeOperationsService:getUniqCustomerGeoZoneRelData");
     }
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void getBuildDurationGeoZoneRelData() throws SystemException {
         try {
@@ -92,6 +106,9 @@ public class ComputeOperationsService implements IComputeOperationsService {
         logger.debug("Exit - ComputeOperationsService:getBuildDurationGeoZoneRelData");
     }
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void getListOfCustomerGeoZoneRelData() throws SystemException {
         try {
@@ -112,6 +129,11 @@ public class ComputeOperationsService implements IComputeOperationsService {
         logger.debug("Exit - ComputeOperationsService:getListOfCustomerGeoZoneRelData");
     }
 
+    /**
+     * @param opr
+     * @param key
+     * @param value
+     */
     private void createLog(DataOperation opr, String key, String value) {
         logger.debug("Enter - ComputeOperationsService:createLog");
         processLogService.logData(opr, new ProcessLogItem(key, value));

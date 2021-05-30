@@ -8,12 +8,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - DataValidatorService provides APIs to validate the input data.
+ */
 @Component
 public class DataValidatorService implements IDataValidatorService {
     Logger logger = LoggerFactory.getLogger(DataValidatorService.class);
     @Autowired
     IFileProcessorService fileProcessorService;
 
+    /**
+     * @throws SystemException
+     */
     @Override
     public void validate() throws SystemException {
         logger.debug("Enter - DataValidatorService:validate");

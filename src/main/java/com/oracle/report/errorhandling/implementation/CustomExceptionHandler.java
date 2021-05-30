@@ -6,11 +6,18 @@ import com.oracle.report.errorhandling.interfaces.ICustomExceptionHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - CustomExceptionHandler handles the exceptions.
+ */
 @Component
 public class CustomExceptionHandler implements ICustomExceptionHandler {
     Logger logger = LoggerFactory.getLogger(CustomExceptionHandler.class);
 
+    /**
+     * @param ex
+     */
     @Override
     public void handleException(Exception ex) {
         if (ex instanceof SystemException) {

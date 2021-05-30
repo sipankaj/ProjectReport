@@ -14,6 +14,11 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 
+/**
+ *Author - Pankaj
+ *Date - 30th May 2021
+ *Description - ProcessLogService provides APIs to store and print data.
+ */
 @Component
 public class ProcessLogService implements IProcessLogService {
     Logger logger = LoggerFactory.getLogger(ReportingApplicationService.class);
@@ -21,6 +26,10 @@ public class ProcessLogService implements IProcessLogService {
     @Autowired
     ReportProperties reportProperties;
 
+    /**
+     * @param operation
+     * @param item
+     */
     @Override
     public void logData(DataOperation operation, ProcessLogItem item) {
         logger.debug("Enter - ProcessLogService:logData");
@@ -40,6 +49,9 @@ public class ProcessLogService implements IProcessLogService {
         logger.debug("Exit - ProcessLogService:logData");
     }
 
+    /**
+     *
+     */
     @Override
     public void printReport() {
         logger.debug("Enter - ProcessLogService:printReport");
