@@ -1,0 +1,12 @@
+com.oracle.report
+com.oracle.report.constants
+com.oracle.report.controller
+com.oracle.report.datatypes.config
+com.oracle.report.datatypes.enums
+com.oracle.report.datatypes.processlog
+com.oracle.report.datatypes.requestmodels
+com.oracle.report.errorhandling.exceptions
+com.oracle.report.errorhandling.implementation
+com.oracle.report.errorhandling.interfaces
+com.oracle.report.services.implementation
+com.oracle.report.services.interfaces
