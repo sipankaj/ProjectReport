@@ -1,6 +1,7 @@
 package com.oracle.report.services.implementation;
 
 import com.oracle.report.errorhandling.exceptions.SystemException;
+import com.oracle.report.errorhandling.interfaces.ErrorCodes;
 import com.oracle.report.services.interfaces.IDataValidatorService;
 import com.oracle.report.services.interfaces.IFileProcessorService;
 import org.slf4j.Logger;
@@ -25,7 +26,8 @@ public class DataValidatorService implements IDataValidatorService {
     @Override
     public void validate() throws SystemException {
         logger.debug("Enter - DataValidatorService:validate");
-        // fileProcessorService.projectData
+        if(!fileProcessorService.getData().isPresent())
+            throw new SystemException(ErrorCodes.VALIDATE_REPORT_PROCESS_FAILURE, "Data is not present",new Exception());
         logger.debug("Exit - DataValidatorService:validate");
     }
 }
