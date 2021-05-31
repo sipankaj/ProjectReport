@@ -23,7 +23,6 @@ class ComputeOperationsServiceTest {
     @Autowired
     ComputeOperationsService computeOperationsService;
 
-
     @Test
     void getUniqCustomerContractRelDataSucess() {
         Mockito.when(fileProcessorService.getData()).thenReturn(getProjectInfo());

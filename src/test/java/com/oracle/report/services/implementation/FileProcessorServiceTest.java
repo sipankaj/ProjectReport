@@ -18,14 +18,16 @@ class FileProcessorServiceTest extends ProjectReportApplicationTests {
     ReportProperties reportProperties;
     @Autowired
     FileProcessorService fileProcessorService;
+
     @Test
     void loadFileSuccess() throws SystemException {
         Mockito.when(reportProperties.getReportFile()).thenReturn("ProjectData.csv");
         fileProcessorService.loadFile();
-        assertEquals(fileProcessorService.getData().isPresent(),true);
+        assertEquals(fileProcessorService.getData().isPresent(), true);
     }
+
     @Test
-    void loadFileFailure(){
+    void loadFileFailure() {
         Mockito.when(reportProperties.getReportFile()).thenReturn(null);
         assertThrows(SystemException.class, () -> {
             fileProcessorService.loadFile();
