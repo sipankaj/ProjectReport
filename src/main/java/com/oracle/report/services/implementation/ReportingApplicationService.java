@@ -42,10 +42,7 @@ public class ReportingApplicationService implements IReportingApplicationService
     @Override
     public void computeData() throws SystemException {
         logger.debug("Enter - ReportingApplicationService:computeData");
-        computeOperationsService.getUniqCustomerContractRelData();
-        computeOperationsService.getUniqCustomerGeoZoneRelData();
-        computeOperationsService.getBuildDurationGeoZoneRelData();
-        computeOperationsService.getListOfCustomerGeoZoneRelData();
+        computeOperationsService.performOpertions();
         logger.debug("Exit - ReportingApplicationService:computeData");
     }
 
