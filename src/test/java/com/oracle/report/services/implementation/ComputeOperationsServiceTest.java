@@ -22,7 +22,7 @@ class ComputeOperationsServiceTest {
     FileProcessorService fileProcessorService;
     @Autowired
     ComputeOperationsService computeOperationsService;
-
+/*
     @Test
     void getUniqCustomerContractRelDataSucess() {
         Mockito.when(fileProcessorService.getData()).thenReturn(getProjectInfo());
@@ -87,7 +87,7 @@ class ComputeOperationsServiceTest {
         });
     }
 
-
+*/
     private Optional<List<ProjectInfo>> getProjectInfo() {
         ProjectInfo projectInfo = ProjectInfo.builder().customerId(1234).
                 contractId(1245).geoZone("geoZone").teamCode("tem1234")
